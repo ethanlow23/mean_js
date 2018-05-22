@@ -1,0 +1,22 @@
+<h3>Know of a pet needing a home?</h3>
+<div *ngFor='let error of errors'>
+    <p style='color: blue;'>{{ error }}</p>
+</div>
+<div class='create_info'>
+  <form (submit)='onCreate()'>
+    <p>Pet name:</p>
+    <input type='text' name='name' [(ngModel)]='petInfo.name'>
+    <p>Pet type:</p>
+    <input type='text' name='type' [(ngModel)]='petInfo.type'>
+    <p>Description:</p>
+    <input type='text' name='description' [(ngModel)]='petInfo.description'>
+    <p>Skills:</p>
+    <div class='skills'>
+      <p>Skill 1: <input type='text' name='skillOne' [(ngModel)]='petInfo.skills[0]'></p>
+      <p>Skill 2: <input type='text' name='skillTwo' [(ngModel)]='petInfo.skills[1]'></p>
+      <p>Skill 3: <input type='text' name='skillThree' [(ngModel)]='petInfo.skills[2]'></p>
+    </div>
+    <input type='submit' value='Add pet'>
+    <a href='/'><button type='button'>Cancel</button></a>
+  </form>
+</div>

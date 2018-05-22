@@ -1,0 +1,22 @@
+<h3>Edit this pet</h3>
+<div class='edit_info'>
+  <div *ngIf='pet'>
+    <form (submit)='onEdit(pet)'>
+      <p>Pet name:</p>
+      <input type='text' name='name' [(ngModel)]='editPet.name'>
+      <p>Pet type:</p>
+      <input type='text' name='type' [(ngModel)]='editPet.type'>
+      <p>Description:</p>
+      <input type='text' name='description' [(ngModel)]='editPet.description'>
+      <p>Skills:</p>
+      <div class='skills'>
+        <p>Skill 1: <input type='text' name='skillOne' [(ngModel)]='editPet.skills[0]'></p>
+        <p>Skill 2: <input type='text' name='skillTwo' [(ngModel)]='editPet.skills[1]'></p>
+        <p>Skill 3: <input type='text' name='skillThree' [(ngModel)]='editPet.skills[2]'></p>
+      </div>
+      <input type='submit' value='Edit pet'>
+      <a href='/pets/{{pet._id}}'><button type='button'>Cancel</button></a>
+    </form>
+    
+  </div>
+</div>

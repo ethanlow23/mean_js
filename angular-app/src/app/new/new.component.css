@@ -1,0 +1,12 @@
+.create_info {
+    border: 2px solid black;
+    width: 400px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.skills {
+    padding-left: 30px;
+}
+p {
+    color: gray;
+}

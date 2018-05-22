@@ -1,0 +1,19 @@
+#wrapper {
+    width: 500px;
+}
+span {
+    font-weight: normal;
+    margin-left: 10px;
+}
+a {
+    float: right;
+}
+.skill h3 {
+    font-weight: normal;
+    margin-left: 20px;
+}
+.skill h3 .skills {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+}

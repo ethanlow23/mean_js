@@ -1,0 +1,13 @@
+<div id='wrapper'>
+    <a href='/'>Home</a>
+    <div *ngIf='pet'>
+        <h3>Details about {{ pet.name }}</h3>
+        <h3>Pet Type: <span>{{ pet.type }}</span></h3>
+        <h3>Description: <span>{{ pet.description }}</span></h3>
+        <h3 class='skills'>Skills:</h3>
+            <div *ngFor='let skill of pet.skills' class='skill'>
+                <h3>{{ skill }}</h3>
+            </div>
+        <button (click)='onDestroy(pet)'>Adopt this pet!</button>
+    </div>
+</div>
